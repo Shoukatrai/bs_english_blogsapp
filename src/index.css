@@ -1,9 +1,20 @@
 @import "tailwindcss";
-.link{
-    text-decoration: none;
-    color: #ff7e6b;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  padding: o;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
 }
-.link:hover{
-    text-decoration: underline;
-    transform: translateY(-2px);
+body {
+  background-color: #f5f1dc;
+  font-family: "Lato", sans-serif;
+}
+.link {
+  text-decoration: none;
+  color: #ff7e6b;
+}
+.link:hover {
+  text-decoration: underline;
+  transform: translateY(-2px);
 }

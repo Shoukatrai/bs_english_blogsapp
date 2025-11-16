@@ -35,7 +35,7 @@ export default function LatestPosts() {
     <Box sx={{ py: 8, px: { xs: 2, sm: 4 } }}>
       <Typography
         variant="h4"
-        sx={{ fontWeight: 700, mb: 3, textAlign: "center" }}
+        sx={{ fontWeight: 700, mb: 3, textAlign: "center" , color: "primary.main"}}
       >
         Latest Posts
       </Typography>

@@ -40,7 +40,7 @@ export default function Features() {
     <Box sx={{ py: 8, px: { xs: 2, sm: 4 } }}>
       <Typography
         variant="h4"
-        sx={{ fontWeight: 700, mb: 5, textAlign: "center" }}
+        sx={{ fontWeight: 700, mb: 5, textAlign: "center" , color: "primary.main"}}
       >
         Features
       </Typography>

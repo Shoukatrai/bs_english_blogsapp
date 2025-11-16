@@ -14,26 +14,23 @@ export default function Hero() {
       maxWidth={false}
       disableGutters
       sx={{
+        position: "relative",
+        width: "100%",
+        minHeight: "100vh",
         display: "flex",
         alignItems: "center",
+        justifyContent: "center",
         textAlign: "center",
         color: "white",
+        px: { xs: 2, sm: 4 },
+        py: { xs: 4, sm: 6 },
+        overflow: "hidden",
 
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
 
-        width: "100%",
-        minHeight: "100vh",
-
-        px: { xs: 2, sm: 4 },
-        py: { xs: 4, sm: 6 },
-
-        position: "relative",
-        overflow: "hidden",
-
-        // Dark overlay
         "&::before": {
           content: '""',
           position: "absolute",
@@ -46,12 +43,12 @@ export default function Hero() {
         },
       }}
     >
-      {/* make sure this stays above overlay */}
       <Stack
-        spacing={2}
+        spacing={3}
         sx={{
-          maxWidth: { xs: "100%", sm: "70%" },
+          position: "relative",
           zIndex: 1,
+          maxWidth: { xs: "90%", sm: "70%" },
           mx: "auto",
         }}
       >
@@ -66,11 +63,7 @@ export default function Hero() {
           Our{" "}
           <Typography
             component="span"
-            sx={{
-              fontSize: "inherit",
-              fontWeight: 700,
-            }}
-            color="primary"
+            sx={{ fontSize: "inherit", fontWeight: 700, color: "primary.main" }}
           >
             latest products
           </Typography>
@@ -78,9 +71,9 @@ export default function Hero() {
 
         <Typography
           sx={{
-            fontSize: "1.1rem",
+            fontSize: "clamp(1rem, 1.1vw, 1.25rem)",
             opacity: 0.9,
-            maxWidth: "700px",
+            maxWidth: 700,
             mx: "auto",
           }}
         >
@@ -93,7 +86,14 @@ export default function Hero() {
           variant="contained"
           color="primary"
           size="large"
-          sx={{ mt: 2, px: 4, py: 1.4, fontSize: "1rem", fontWeight: 600 }}
+          sx={{
+            mt: 2,
+            px: 4,
+            py: 1.5,
+            fontSize: "1rem",
+            fontWeight: 600,
+            borderRadius: 2,
+          }}
           onClick={() => navigate("/signin")}
         >
           Get Started

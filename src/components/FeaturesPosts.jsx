@@ -38,6 +38,7 @@ export default function FeaturedPosts() {
           fontWeight: 700,
           textAlign: "center",
           mb: 4,
+          color: "primary.main"
         }}
       >
         Featured Posts

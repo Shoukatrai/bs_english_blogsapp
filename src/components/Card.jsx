@@ -107,7 +107,7 @@ const BlogCard = () => {
   };
 
   return (
-    <Grid size={{ xs: 12, sm: 4, md: 4 }}>
+    <Grid size={{ xs: 12, sm: 4, md: 4 }} padding={2}>
       <StyledCard
         variant="outlined"
         onFocus={() => handleFocus(1)}
@@ -129,7 +129,7 @@ const BlogCard = () => {
           <Typography gutterBottom variant="caption" component="div">
             {cardData[1].tag}
           </Typography>
-          <Typography gutterBottom variant="h6" component="div">
+          <Typography gutterBottom variant="h6" sx={{fontSize:30}} component="div" color="primary.main">
             {cardData[1].title}
           </Typography>
           <StyledTypography variant="body2" color="text.secondary" gutterBottom>
