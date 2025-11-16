@@ -60,12 +60,12 @@ export default function Hero() {
             lineHeight: 1.2,
           }}
         >
-          Our{" "}
+          Discover the{" "}
           <Typography
             component="span"
             sx={{ fontSize: "inherit", fontWeight: 700, color: "primary.main" }}
           >
-            latest products
+            latest blogs
           </Typography>
         </Typography>
 
@@ -77,9 +77,10 @@ export default function Hero() {
             mx: "auto",
           }}
         >
-          Explore our cutting-edge dashboard, delivering high-quality solutions
-          tailored to your needs. Elevate your experience with top-tier features
-          and services.
+          Stay updated with trending articles, tutorials, and insights from our
+          vibrant blogging community. Create, read, and share knowledge across
+          various topics including technology, design, products, and company
+          updates.
         </Typography>
 
         <Button
@@ -94,9 +95,9 @@ export default function Hero() {
             fontWeight: 600,
             borderRadius: 2,
           }}
-          onClick={() => navigate("/signin")}
+          onClick={() => navigate("/signup")}
         >
-          Get Started
+          GET STARTED
         </Button>
       </Stack>
     </Container>
