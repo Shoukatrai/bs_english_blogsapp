@@ -1,0 +1,9 @@
+@import "tailwindcss";
+.link{
+    text-decoration: none;
+    color: #ff7e6b;
+}
+.link:hover{
+    text-decoration: underline;
+    transform: translateY(-2px);
+}
