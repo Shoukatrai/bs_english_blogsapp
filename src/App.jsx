@@ -6,10 +6,10 @@ import CreateBlog from "./pages/Blogs/CreateBlog";
 import SingleBlog from "./pages/Blogs/SingleBlog";
 import Navbar from "./components/Navbar"
 import SignInCard from "./pages/auth/Signin";
+import SignupPage from "./pages/auth/Signup";
 const App = () => {
   return (
     <>
-    <Navbar />
     <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />
@@ -17,6 +17,7 @@ const App = () => {
         <Route path="/create_blog" element={<CreateBlog />} />
         <Route path="/single_blog?=id" element={<SingleBlog />} />
         <Route path="/signin" element={<SignInCard />} />
+        <Route path="/signup" element={<SignupPage />} />
       </Routes>
       </BrowserRouter>
     </>

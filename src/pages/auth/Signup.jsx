@@ -22,7 +22,14 @@ const Card = styled(MuiCard)({
   borderRadius: "12px",
 });
 
-export default function WelcomeSignIn() {
+export default function SignupPage() {
+  const steps = [
+    "Create your account",
+    "Login securely",
+    "Write your first blog post",
+    "Read and explore other blogs",
+  ];
+
   return (
     <Box
       sx={{
@@ -39,7 +46,7 @@ export default function WelcomeSignIn() {
           "rgba(0, 0, 0, 0.05) 0px 0px 10px, rgba(0, 0, 0, 0.05) 0px 0px 2px",
       }}
     >
-      {/* Left side: Welcome note */}
+      {/* Left side: Welcome + steps */}
       <Box
         sx={{
           display: "flex",
@@ -63,10 +70,11 @@ export default function WelcomeSignIn() {
           }}
         >
           <img
-            src="https://img.icons8.com/ios-glyphs/30/000000/long-arrow-left.png"
-            alt="Back"
+            src="https://img.icons8.com/ios-filled/50/000000/home.png"
+            alt="Home"
+            style={{ width: 24, height: 24 }}
           />
-          Go Back
+          Home Page
         </Button>
 
         <Typography
@@ -74,20 +82,31 @@ export default function WelcomeSignIn() {
           variant="h3"
           sx={{ fontWeight: "bold", color: "primary.main" }}
         >
-          Welcome Back!
+          Welcome to BlogSphere
         </Typography>
+
         <Typography variant="h6" color="text.secondary">
-          Discover the latest insights, trends, and stories from our vibrant
-          community. Explore articles across technology, design, products, and
-          company news.
+          Join our vibrant blogging community! Follow the simple steps below to
+          get started:
         </Typography>
-        <Typography variant="body1" color="text.secondary">
-          Sign in to create, comment, and save your favorite blogs, or browse
-          anonymously to discover trending content.
-        </Typography>
+
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
+          {steps.map((step, index) => (
+            <Typography
+              key={index}
+              variant="body1"
+              sx={{
+                color: "text.secondary",
+                "&::before": { content: `"✓ "`, color: "primary.main" },
+              }}
+            >
+              {step}
+            </Typography>
+          ))}
+        </Box>
       </Box>
 
-      {/* Right side: Sign-in card */}
+      {/* Right side: Signup card */}
       <Card variant="outlined" sx={{ boxShadow: "none", border: "none" }}>
         <Typography
           component="h2"
@@ -100,7 +119,7 @@ export default function WelcomeSignIn() {
             color: "primary.main",
           }}
         >
-          Sign in
+          Create Account
         </Typography>
         <Box
           component="form"
@@ -114,6 +133,18 @@ export default function WelcomeSignIn() {
           }}
         >
           <FormControl>
+            <FormLabel htmlFor="name">Name</FormLabel>
+            <TextField
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+              fullWidth
+              variant="outlined"
+            />
+          </FormControl>
+
+          <FormControl>
             <FormLabel htmlFor="email">Email</FormLabel>
             <TextField
               id="email"
@@ -121,12 +152,12 @@ export default function WelcomeSignIn() {
               name="email"
               placeholder="your@email.com"
               autoComplete="email"
-              autoFocus
               required
               fullWidth
               variant="outlined"
             />
           </FormControl>
+
           <FormControl>
             <FormLabel htmlFor="password">Password</FormLabel>
             <TextField
@@ -134,19 +165,21 @@ export default function WelcomeSignIn() {
               placeholder="••••••"
               type="password"
               id="password"
-              autoComplete="current-password"
+              autoComplete="new-password"
               required
               fullWidth
               variant="outlined"
             />
           </FormControl>
+
           <Button type="submit" fullWidth variant="contained" sx={{ mt: 1 }}>
-            Sign in
+            Sign Up
           </Button>
+
           <Typography sx={{ textAlign: "center", mt: 2 }}>
-            Don&apos;t have an account?{" "}
-            <Link to="/signup" className="link">
-              Sign up
+            Already have an account?{" "}
+            <Link to="/signin" className="link">
+              Sign in
             </Link>
           </Typography>
         </Box>
